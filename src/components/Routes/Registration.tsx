@@ -126,7 +126,7 @@ const Registration = ({ navigation }: Props) => {
       <NavigationCard
         description="Already have an account?"
         cta="Sign in!"
-        onPress={() => navigation.navigate({ key: 'Login' })}
+        onPress={() => navigation.navigate('Login')}
       />
 
       <ProjectPicker />

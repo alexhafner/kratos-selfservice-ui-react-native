@@ -56,7 +56,7 @@ const Login = ({ navigation, route }: Props) => {
   const onSubmit = (payload: SubmitSelfServiceLoginFlowBody) =>
     flow
       ? newKratosSdk(project)
-          .submitSelfServiceLoginFlow(flow.id, sessionToken, payload)
+          .submitSelfServiceLoginFlow(flow.id,  payload, sessionToken)
           .then(({ data }) => Promise.resolve(data as SessionContext))
           // Looks like everything worked and we have a session!
           .then((session) => {
